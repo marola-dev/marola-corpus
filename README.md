@@ -13,8 +13,7 @@ It is one of the marola repos under the [umbrella](https://github.com/marola-dev
 well-known references (NOAA, IMA/SC, Wikipedia) — but the sentence-by-sentence check against each
 source is a human job, and it has **not** been done yet. Do that before this corpus backs a public
 bot (Phase 1); anything that can't be verified gets deleted, not softened
-([`knowledge/README.md`](https://github.com/marola-dev/marola-corpus/blob/main/knowledge/README.md)
-has the per-source detail).
+([`docs/4-reference.md`](docs/4-reference.md) has the per-source detail).
 
 ## Adding a document
 
@@ -29,9 +28,10 @@ One paragraph per claim, blank lines between them. Only what the source supports
 ```
 
 `just corpus-check` (CI runs it too) fails a file without that title and `Source:` line — every
-document but `knowledge/README.md` itself, which the chunker skips by design. The `corpus-doc`
-skill in `.claude/skills/` walks an agent through the same steps. Trying the new file against real
-retrieval, and cutting a release, are in [`docs/3-development.md`](docs/3-development.md).
+document but `knowledge/README.md` itself, which has no source by design. The `corpus-doc` skill
+in `.claude/skills/` walks an agent through the same steps; the format and chunking are in
+[`docs/1-design.md`](docs/1-design.md). Trying the new file against real retrieval, and cutting a
+release, are in [`docs/3-development.md`](docs/3-development.md).
 
 ## Repo map
 
@@ -39,10 +39,10 @@ retrieval, and cutting a release, are in [`docs/3-development.md`](docs/3-develo
 |---|---|
 | `knowledge/*.md` | the documents |
 | `knowledge/safety/` | safety topics (emergency footer) |
-| `knowledge/README.md` | the format, embedding-model table, and the sources' verification status |
+| `knowledge/README.md` | a format reminder |
 | `scripts/corpus-check.sh` | the format gate |
 | `scripts/corpus-tarball.sh` | the release asset, byte-reproducibly |
-| `.claude/skills/corpus-doc/`, `.claude/skills/eli5/` | adding a document; explaining a sea or marola topic |
+| `.claude/skills/corpus-doc/` | adding a document |
 
 ## Contracts
 
@@ -52,8 +52,12 @@ retrieval, and cutting a release, are in [`docs/3-development.md`](docs/3-develo
 | Publishes | `marola-corpus-<tag>.tar.gz` (`knowledge/`, byte-reproducible) on each `v*` tag's release, via [`release.yml`](https://github.com/marola-dev/marola-corpus/blob/main/.github/workflows/release.yml) |
 | Pinned by | marola-app and marola-ml, each in its own `corpus.version` |
 
-More in [`docs/3-development.md`](docs/3-development.md) and
-[AGENTS.md](https://github.com/marola-dev/marola-corpus/blob/main/AGENTS.md).
+## Docs
+
+- [`docs/1-design.md`](docs/1-design.md): the document format and how the app chunks it.
+- [`docs/3-development.md`](docs/3-development.md): trying a change, releasing, bumping the consumers.
+- [`docs/4-reference.md`](docs/4-reference.md): each document's source and verification status.
+- [AGENTS.md](https://github.com/marola-dev/marola-corpus/blob/main/AGENTS.md): the rules for agents working here.
 
 ## Gemini review
 
