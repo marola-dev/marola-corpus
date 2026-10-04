@@ -23,14 +23,12 @@ marola's retrieval corpus: the sourced Markdown notes that the app's `--ask` and
 `ask_ocean_question` answer from, and nothing else.
 
 - `knowledge/*.md`: one topic per file. Line 1 `# <title>`, line 2 `Source: <url>`, then prose in
-  blank-line-separated paragraphs (the app's `Corpus` chunks on blank lines; a paragraph is the
-  retrieval unit). `knowledge/README.md` holds the format and the sources' verification status.
+  blank-line-separated paragraphs (the app's `Corpus` chunks on blank lines: `docs/1-design.md`).
+  Each document has a row in `docs/4-reference.md` with its source and verification status.
 - `knowledge/safety/`: safety topics. An answer grounded in one gets the app's emergency footer;
   never write that footer into the Markdown.
-- `.claude/skills/corpus-doc/`: adding a document. `.claude/skills/eli5/`: explaining a sea or
-  marola topic from zero. Both name marola's own files and recipes (`just ask`,
-  `just knowledge-index`, `docs/…`): run those in a marola checkout, pointed at this one with
-  `MAROLA_KNOWLEDGE_DIR` (below).
+- `.claude/skills/corpus-doc/`: adding a document. Its index and ask steps run in a marola-app
+  checkout, pointed at this one with `MAROLA_KNOWLEDGE_DIR` (below).
 - `scripts/corpus-check.sh`: the format gate. `scripts/corpus-tarball.sh`: the release asset.
 
 ## What it consumes and produces
@@ -42,9 +40,9 @@ marola's retrieval corpus: the sourced Markdown notes that the app's `--ask` and
 
 This repo never reads a consumer's tree, and no workflow here builds the app (MIP-0070 §5.4).
 
-**Trying an unreleased document in the app.** In a marola checkout with this repo next to it (the
-umbrella's submodule, or any clone): `MAROLA_KNOWLEDGE_DIR=<path-to-this-repo>/knowledge just ask
-"<question>"`. The pin is for releases only.
+**Trying an unreleased document in the app.** In a marola-app checkout with this repo next to it
+(the umbrella's submodule, or any clone): `MAROLA_KNOWLEDGE_DIR=<path-to-this-repo>/knowledge just
+ask "<question>"`. The pin is for releases only.
 
 **Cutting a release.** Merge to `main`, then tag it `vX.Y.Z` (a new or changed document is a minor
 bump, a fix a patch) and push the tag; `release.yml` attaches the tarball. Then bump
@@ -62,6 +60,24 @@ just corpus-tarball v0.1.0  # .tmp/marola-corpus-v0.1.0.tar.gz, as release.yml b
 
 The devkit's git hooks (`core.hooksPath .devkit/.githooks`, set by the dev shell) run
 `just precommit` and `just prepush`.
+
+## Docs
+
+`README.md` is the landing: what the repo is, its status, adding a document, the repo map, its
+contracts and links. There is no `docs/index.md`. `docs/` holds numbered pages (MIP-0074 §5.2):
+`1-design` (the document format, chunking), `3-development` (trying a change, releasing, bumping
+the consumers), `4-reference` (each document's source and verification status). The H1 is the nav
+label.
+
+- **Links**: relative within `docs/` and from the README into `docs/`, written to work on GitHub.
+  A file outside `docs/` (`AGENTS.md`, a `knowledge/` file) is linked by its
+  `https://github.com/marola-dev/marola-corpus/blob/main/…` URL; another repo or the umbrella by
+  `https://docs.marola.dev/…`.
+- **Recipes**: a doc names only this repo's and the devkit's recipes. Any other carries the
+  checkout marker: "in a marola-<name> checkout" in the same sentence, or
+  `# in a marola-<name> checkout` as a fence's first line.
+- `just quality` runs `docs-lint` (MIP-0074 §7): it fails on a foreign recipe without the marker,
+  a relative link that leaves the repo, and `docs/index.md`.
 
 ## Cost & deployment safety (hard rule)
 

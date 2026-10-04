@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # corpus-check — every corpus document opens with `# <title>` then `Source: <http(s) url>`, the
-# two lines marola's Corpus chunker turns into the citation (knowledge/README.md).
+# two lines marola's Corpus chunker turns into the citation (docs/1-design.md).
 #
 #   scripts/corpus-check.sh [dir]    # default: knowledge
 #   scripts/corpus-check.sh --self-test
