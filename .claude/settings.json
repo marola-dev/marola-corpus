@@ -5,7 +5,7 @@
     "sessionUrl": false
   },
   "extraKnownMarketplaces": {
-    "marola-devkit": { "source": { "source": "github", "repo": "marola-dev/marola-devkit", "ref": "v0.2.4" } }
+    "marola-devkit": { "source": { "source": "github", "repo": "marola-dev/marola-devkit", "ref": "v0.4.1" } }
   },
   "enabledPlugins": { "marola-devkit@marola-devkit": true },
   "permissions": {
@@ -37,6 +37,9 @@
       "Read(**/*.key)",
       "Bash(gh pr merge*)",
       "Bash(gh pr close*)",
+      "Bash(gh stack merge*)",
+      "Bash(gh stack unstack*)",
+      "Bash(gh stack delete*)",
       "Bash(gh release*)",
       "Bash(git tag*)",
       "Bash(git push --tags*)"
