@@ -19,13 +19,14 @@ corpus-tarball tag:
 quality:
     #!/usr/bin/env bash
     set -euo pipefail
-    for tool in shellcheck actionlint agents-check; do command -v "$tool" >/dev/null || { echo "quality: $tool not installed — run inside 'nix develop'" >&2; exit 1; }; done
+    for tool in shellcheck actionlint agents-check docs-lint; do command -v "$tool" >/dev/null || { echo "quality: $tool not installed — run inside 'nix develop'" >&2; exit 1; }; done
     shellcheck --severity=error scripts/*.sh
     actionlint
     scripts/corpus-check.sh
     scripts/corpus-check.sh --self-test
     scripts/corpus-tarball.sh --self-test
     agents-check
+    docs-lint
 
 # The devkit hooks' contract: fast checks at commit, the full gate at push.
 precommit:
