@@ -22,7 +22,6 @@
       "Bash(just corpus-check*)",
       "Bash(just corpus-tarball*)",
       "Bash(uprd:*)",
-      "Bash(cost-split:*)",
       "Bash(scripts/corpus-check.sh*)",
       "Bash(git status*)",
       "Bash(git diff*)",
