@@ -1,0 +1,85 @@
+version = 1
+
+# Licence and copyright for every file, in one place, as the umbrella and marola-ml do: no
+# per-file headers. Check with `reuse lint` (CI's `reuse` job).
+#
+# A note under knowledge/ summarises one source (docs/1-design.md). A summary of a CC BY 4.0
+# article stays CC BY 4.0 with the article's authors credited; a note whose source is a Brazilian
+# official act (not protected, Lei 9.610/98 art. 8º, IV) or MIT text is MIT. A source under
+# NC, ND, SA or all-rights-reserved terms is never summarised here.
+
+[[annotations]]
+path = ["**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 marola.dev"
+SPDX-License-Identifier = "MIT"
+
+# Rapizo, D'Ávila, Violante-Carvalho, Pinho & Parente (2014), Anuário IGEO-UFRJ 37(1), doi:10.11137/2014_1_36_45
+[[annotations]]
+path = ["knowledge/lioc-medir-ondas-com-camera.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2014 Henrique Rapizo, Victor D'Ávila, Nelson Violante-Carvalho, Uggo Pinho, Carlos Eduardo Parente", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Lima, Lins-de-Barros & Cirano (2021), Anuário IGEO-UFRJ 44, doi:10.11137/1982-3908_2021_44_41726
+[[annotations]]
+path = ["knowledge/ressacas-rio-de-janeiro-1948-2008.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2021 Rafael de França Lima, Flavia Moraes Lins-de-Barros, Mauro Cirano", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Lins-de-Barros, Klumb-Oliveira & Lima (2018), Rev. Gestão Costeira Integrada 18(2), doi:10.5894/rgci-n146
+[[annotations]]
+path = ["knowledge/ressacas-e-danos-rio-de-janeiro-1979-2013.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2018 Flavia Moraes Lins-de-Barros, Leonardo Klumb-Oliveira, Rafael de França Lima", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Bulhões (2010), Sociedade & Natureza 22(1), doi:10.1590/S1982-45132010000100009
+[[annotations]]
+path = ["knowledge/safety/correntes-de-retorno-rio-de-janeiro.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2010 Eduardo Manuel Rosa Bulhões", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Brentano & Laurinavicius (2010), RBEPT 2(3), doi:10.15628/rbept.2010.18028
+[[annotations]]
+path = ["knowledge/balneabilidade-e-coli-chuva-florianopolis.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2010 Débora Monteiro Brentano, Letícia Meurer Laurinavicius", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Leal, Bonetti & Pereira (2020), Rev. Bras. Geogr. Física 13(4), doi:10.26848/rbgf.v13.4.p1730-1755
+[[annotations]]
+path = ["knowledge/mares-de-tempestade-armacao-e-canasvieiras.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2020 Karine Bastos Leal, Jarbas Bonetti, Pedro de Souza Pereira", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Santos & Bonetti (2021), Rev. Bras. Geogr. Física 14(5), doi:10.26848/rbgf.v14.5.p2534-2549
+[[annotations]]
+path = ["knowledge/inundacao-costeira-enseada-de-tijucas.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2021 Elaine Cristina dos Santos, Jarbas Bonetti", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Trombetta, Oleinik, Lopes, Guimarães, Marques & Isoldi (2018), Rev. Bras. Geogr. Física 11(4), doi:10.26848/rbgf.v11.4.p1303-1320
+[[annotations]]
+path = ["knowledge/energia-das-ondas-litoral-catarinense.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2018 Thaísa Beloti Trombetta, Phelype Haron Oleinik, Bruno Vasconcellos Lopes, Ricardo Cardoso Guimarães, Wiliam Correa Marques, Liércio André Isoldi", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Oliveira, Oliveira, Fernandes & Ebecken (2020), Rev. Bras. Geogr. Física 13(6), doi:10.26848/rbgf.v13.6.p2531-2552
+[[annotations]]
+path = ["knowledge/temperatura-do-mar-e-corrente-do-brasil.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2020 Marilia Mitidieri Fernandes de Oliveira, Jorge Luiz Fernandes de Oliveira, Pedro José Farias Fernandes, Nelson Francisco Favilla Ebecken", "2026 marola.dev"]
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Summarises h0ffmann/ww3-gpu's proposal (pubs/proposal/pt/), MIT.
+[[annotations]]
+path = ["knowledge/labeco-previsao-de-ondas-ww3.md"]
+precedence = "override"
+SPDX-FileCopyrightText = ["2026 Matheus Hoffmann", "2026 marola.dev"]
+SPDX-License-Identifier = "MIT"
