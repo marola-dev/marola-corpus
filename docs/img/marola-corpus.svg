@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -12 320 180" width="320" height="180" role="img" aria-labelledby="t">
+  <title id="t">Uma pequena onda que se enrola uma vez e se deita em três linhas de texto, como uma página: desenho original feito para o marola-corpus</title>
+  <path d="M14 70 C 40 70, 58 58, 76 40 C 96 20, 124 10, 150 16 C 176 22, 182 52, 164 64 C 150 74, 132 64, 138 50 C 144 38, 162 42, 166 56 C 172 78, 150 96, 120 96 H 300"
+        fill="none" stroke="#1682D4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 124 H 300" fill="none" stroke="#1682D4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M40 152 H 220" fill="none" stroke="#1682D4" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="242" cy="152" r="5" fill="#F2B705"/>
+</svg>
