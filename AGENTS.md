@@ -90,8 +90,7 @@ An agent starts work only on an issue carrying `agent-ready`, in this repo (MIP-
 
 ## Attribution (hard rule)
 
-Commits carry `Tested:` and `Co-Authored-By: Claude <noreply@anthropic.com>`, as in the
-umbrella.
+Commits carry `Tested:` and `Co-Authored-By: Claude <noreply@anthropic.com>`, as in the umbrella.
 
 ## Phase discipline (hard rule)
 
