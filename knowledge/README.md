@@ -12,3 +12,9 @@ The chunking rule is in
 [docs/1-design.md](https://github.com/marola-dev/marola-corpus/blob/main/docs/1-design.md); each
 file's source and verification status in
 [docs/4-reference.md](https://github.com/marola-dev/marola-corpus/blob/main/docs/4-reference.md).
+
+Notes are in English or Portuguese. Each Portuguese note names its source's authors, venue and
+licence in its first paragraph. A note that summarises a CC BY 4.0 article is itself licensed
+CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), crediting those authors; every other
+note is MIT. The full list is
+[REUSE.toml](https://github.com/marola-dev/marola-corpus/blob/main/REUSE.toml).
