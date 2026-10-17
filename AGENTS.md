@@ -37,6 +37,7 @@ marola's retrieval corpus: the sourced Markdown notes that the app's `--ask` and
 |---|---|
 | corpus → app, ml | `marola-corpus-<tag>.tar.gz` on each `v*` tag's release (`release.yml`): `knowledge/` with sorted entries, owner 0:0 and the commit's mtime, so a tag always has the same bytes. A consumer pins the tag in its `corpus.version`; its `corpus-fetch` unpacks it into `.tmp/knowledge` |
 | corpus → umbrella | `README.md` and `docs/`, aggregated into docs.marola.dev (`notify-umbrella.yml`) |
+| corpus → devkit | `bump-ready` when a devkit bump PR's CI ends green (`bump-ready.yml`) |
 
 This repo never reads a consumer's tree, and no workflow here builds the app (MIP-0070 §5.4).
 
